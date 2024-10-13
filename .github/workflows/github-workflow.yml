@@ -28,6 +28,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: set up java 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: 21
+          distribution: 'temurin'
+          architecture: x64
+
+      - name: Run Maven Build
+        run: mvn --batch-mode clean package
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
