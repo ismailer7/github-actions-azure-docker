@@ -11,6 +11,7 @@ name: Build and deploy a container to an Azure Web App
 
 env:
   AZURE_WEBAPP_NAME: SpringBootGithubActionsDocker   # set this to your application's name
+  JAVA_VERSION: '21'
 
 on:
   push:
